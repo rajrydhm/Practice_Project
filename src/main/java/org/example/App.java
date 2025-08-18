@@ -1,7 +1,8 @@
 package org.example;
+import Products.SUV;
 import Vehicle.vehicle;
 import Engine.Engine;
-import Truck.Truck;
+import Products.Truck;
 
 public class App {
     public static void main( String[] args ) {
@@ -35,6 +36,13 @@ public class App {
         //Inheritance Example
         Truck myTruck = new Truck(); // Create an instance of Truck which inherits from vehicle
         System.out.println("Truck model: " + Truck.model); // Access static public attribute from
+
+        vehicle mySUV = new SUV(); // Create an instance of Vehicle
+        System.out.println("SUV model: " + SUV.model); // Access static public attribute from SUV
+        System.out.println("SUV color: " + mySUV.color); // Access non-static public
+
+        mySUV.setEngine(mycarEngine); // Set the engine type for the SUV
+        System.out.println(mySUV.getEngine().getType());
 
 
 
