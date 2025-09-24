@@ -71,12 +71,12 @@ public class App {
         myBike.stop(); // Calls overridden method in Bike class
 
         System.out.println("-------------------");
-        System.out.println("Now we will override the constructors of vehicle class in Car and Bike classes");
+        System.out.println("Now we will override the constructors of vehicle class in Car and Bike classes using Super keyword");
 
-        System.out.println("myCar.Wheels: " + myCar.Wheels); // Accessing public attribute from Car class
-        System.out.println("myCar.Doors: " + myCar.Doors); // Accessing public attribute from Car class
+        Car myCar2 = new Car(4, 2); // Create an instance of Car using the overridden constructor
+        System.out.println("My new car has " + myCar2.getWheels() + " wheels and " + myCar2.getDoors() + " doors.");
 
-
-
+        Bike myBike2 = new Bike(2,0, "Red", false); // Create an instance of Bike using the default constructor
+        System.out.println("My new bike has " + myBike2.getWheels() + " wheels and " + myBike2.getDoors() + " doors" + " and color " + myBike2.color + " and hasGears: " + myBike2.hasGears);
     }
 }

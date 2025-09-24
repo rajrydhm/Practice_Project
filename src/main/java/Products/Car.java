@@ -3,12 +3,9 @@ package Products;
 import Vehicle.vehicle;
 
 public class Car extends vehicle {
-    public int Wheels = 2;
-    public int Doors = 3;
 
     public Car(int Wheels, int Doors){
-        this.Wheels = Wheels;
-        this.Doors = Doors;
+        super(Wheels,Doors, "Black"); // Call the parent constructor to set wheels, doors, and color
     }
 public Car(){}
 
@@ -19,5 +16,9 @@ public Car(){}
 
     public void stop() {
         System.out.println("Car has now stopped!");
+    }
+
+    public void openTrunk() {
+        System.out.println("Trunk is now open.");
     }
 }
