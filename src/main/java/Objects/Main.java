@@ -26,8 +26,9 @@ public class Main {
 
         // Note that changing the static attributes via student2 affects student1 as well
         System.out.println("\nAfter changing static attributes via student2:");
-        System.out.println("Student1's School Name: " + Student.schoolName + "\nStudent1's School Address: " + Student.schoolAddress);
-        // Since Static attributes belong to the class, they are shared among all instances of the class.
+        System.out.println("Student1's School Name: " + student1.schoolName + "\nStudent1's School Address: " + student1.schoolAddress);
+        // Since Static attributes belong to the class, they are shared among all instances of the class,
+        // Hence using the class name to access static attributes is preferred.
         // if you change a static attribute using one object, it affects all other objects of that class.
         // Non-static attributes are unique to each object. Changing a non-static attribute in one object does not affect other objects.
         System.out.println("\nBut Student1 Name, Age and GPA remained same\nName: " +

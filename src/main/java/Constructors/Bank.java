@@ -6,7 +6,7 @@ public class Bank {
     double balance;
     String email;
     static String bankName = "ABC Bank"; // static variable shared by all instances of Customer class
-    static int customerCount = 0; // static variable to keep track of number of customers
+    static int customerCount; // static variable to keep track of number of customers
 
     // Constructor
     public Bank(String name, int CustomerAge, double balance) {
