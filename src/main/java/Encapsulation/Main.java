@@ -29,7 +29,7 @@ public class Main {
         System.out.println("My Car engine type from Car class: " + car.getEngine().getType());// Access engine type from Car class using getter methods
 
         // Let's work with horsepower which is a private attribute of type Engine in Car class
-        System.out.println("My Car engine type from Car class: " + car.getHorsepower());
+        System.out.println("My Car engine type from Car class: " + car.getEngine().horsepower);
 
 
 

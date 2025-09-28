@@ -29,13 +29,5 @@ public class Car {
     public void setEngine(Engine engine) {
         this.engine = engine;
     }
-
-    public Engine getHorsepower() {
-        return horsepower;
-    }
-
-    public void setHorsepower(Engine horsepower) {
-        this.horsepower = horsepower;
-    }
 }
 

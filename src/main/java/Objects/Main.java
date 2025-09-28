@@ -35,5 +35,40 @@ public class Main {
                 student1.name + "\nAge: " +
                 student1.age + "\nGPA: " +
                 student1.gpa);
+
+        //calling the study method for both students
+        System.out.println();
+        student1.study();
+        student2.study();
+
+        //Array of objects
+        //Let's create one more student object to understand array of objects
+        Student student3 = new Student();
+        student3.name = "Charlie";
+        student3.age = 21;
+        student3.gpa = 3.9;
+
+        // Create an array to hold Student objects
+        Student[] students = {student1, student2, student3};
+
+        // Static attributes are shared across all instances, so they remain the same
+        System.out.println("\nArray of Students using classic for-loop:");
+        for (int i = 0; i < students.length; i++) {
+            System.out.println("Student " + (i + 1) + " Name: " + students[i].name + ", Age: " + students[i].age + ", GPA: " + students[i].gpa + ", School: " + Student.schoolName);
+        }
+
+        System.out.println("\nArray of Students using enhanced for-loop:");
+        for (Student s : students) {
+            System.out.println("Name: " + s.name + ", Age: " + s.age + ", GPA: " + s.gpa + ", School: " + Student.schoolName);
+        }
+
+        // Anonymous Objects
+        System.out.println("\nAnonymous Object:");
+        new Student().name = "David"; // Creating an anonymous object and setting its name
+        System.out.println("Anonymous Student Name: " + new Student().name); // Creating another anonymous object and trying to access its name
+        // Note: The above line will print null because we are creating a new anonymous object which has no name set.
+        // Anonymous objects are useful when you need an object for a short period of time and do not need to reference it later.
+
+
     }
 }
