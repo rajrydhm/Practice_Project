@@ -66,8 +66,25 @@ public class Main {
         System.out.println("\nAnonymous Object:");
         new Student().name = "David"; // Creating an anonymous object and setting its name
         System.out.println("Anonymous Student Name: " + new Student().name); // Creating another anonymous object and trying to access its name
+
         // Note: The above line will print null because we are creating a new anonymous object which has no name set.
         // Anonymous objects are useful when you need an object for a short period of time and do not need to reference it later.
+        // They are often used in method calls or when you want to quickly create an object without storing it in a variable.
+
+        new Student().schoolName(); // Creating an anonymous object and calling its method
+
+        //Anonymous objects can only be used once. You cannot access the same anonymous object again.
+        //Anonymous objects are used better by creating constructors to initialize attributes,
+        // for which you can find the example in the Constructors package.
+
+        System.out.println("\nAnonymous objects are nothing but objects with a name");
+        System.out.println("Whenever we create an instance of a class as new className(), it is called an object");
+        System.out.println("And assign this new className() to a variable of datatype className, it becomes a named object");
+        System.out.println("Datatype className variableName = new className(); // named object");
+        System.out.println("Datatype has to be a class name because " +
+                "it defines the character of the variable that it's storing an object which is an instance of the class itself");
+        System.out.println("This is how Java will know what that variable real character is");
+        System.out.println("it's just plain english rooted with base logic of java principles");
 
 
     }
