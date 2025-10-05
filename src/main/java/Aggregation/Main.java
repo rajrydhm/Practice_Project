@@ -17,13 +17,17 @@ public class Main {
            System.out.println();
         }
 
+        System.out.println("------------------------------");
+
         Library library = new Library("City Library", "123 Main St");
         System.out.println();
         library.displayInfo();
 
-        Library libraryWithBook = new Library(books);
+        Library libraryWithBook = new Library(books); //we are using books array object in Library as Aggregation
         System.out.println();
-        libraryWithBook.displayInfo();
+        libraryWithBook.displayBooksInfo();
     }
+
+    // Even if Library class is deleted the Books Class and Objects can still function separately
 
 }

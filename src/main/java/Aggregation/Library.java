@@ -19,12 +19,14 @@ public class Library {
     void displayInfo() {
         System.out.println("Library name: " + name);
         System.out.println("Address: " + address);
-        System.out.println("Book available right now:");
-        for(Books book : books){
+    }
+
+    void displayBooksInfo() {
+        System.out.println("Book available right now:\n");
+        for (Books book : books) {
             book.displayBooks();
             System.out.println();
         }
-
-
     }
+
 }
