@@ -1,18 +1,19 @@
 package Aggregation;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Library {
     String name;
     String address;
-    Books[] books; // Aggregation relationship
+    ArrayList<Books> books; // Aggregation relationship
 
     public Library(String name, String address) {
         this.name = name;
         this.address = address;
     }
 
-    public Library(Books[] book) {
+    public Library(ArrayList<Books> book) {
         this.books = book;
     }
 
@@ -21,8 +22,8 @@ public class Library {
         System.out.println("Address: " + address);
     }
 
-    void displayBooksInfo() {
-        System.out.println("Book available right now:\n");
+    public void displayBooksInfo() {
+        System.out.println("\n Book available right now at the library :");
         for (Books book : books) {
             book.displayBooks();
             System.out.println();

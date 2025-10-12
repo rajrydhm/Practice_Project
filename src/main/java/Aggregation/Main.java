@@ -1,18 +1,52 @@
 package Aggregation;
 
+import java.sql.SQLOutput;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
         //Aggregation = Linking two objects as-is relationship where if one class is deleted the other object
         //              is not impacted.
+        // In this Exercise we will pass arguments/parameters through User inputs and store the objects created
+        //into ArrayList
 
-        Books book1 = new Books("Java Programming", "500", "John Doe");
-        Books book2 = new Books("Python Programming", "400", "Jane Smith");
-        Books book3 = new Books("C++ Programming", "600", "Alice Johnson");
+        ArrayList<Books> books = new ArrayList<>(); //we created Arraylist of objects containing books
 
-        Books[] books = {book1, book2, book3};
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Please enter the number of books you would like to add to the library: ");
+        int numberOfBooks = scanner.nextInt();
+        scanner.nextLine();
 
-        for(Books book : books){
+        for (int i = 1; i <= numberOfBooks; i++) {
+            System.out.print("Please enter the name of the book: ");
+            String bookName = scanner.nextLine();
+
+            System.out.print("Please enter the no.of pages : ");
+            int pages = scanner.nextInt();
+            scanner.nextLine();
+
+            System.out.print("Please enter the name of the author: ");
+            String author = scanner.nextLine();
+
+            Books book = new Books(bookName, pages, author); //we created object of each book here
+            books.add(book); //we stored those objects of books into books Arraylist
+        }
+
+        scanner.close();
+
+        Library library = new Library(books); //We created Library object by passing books Arraylist as argument
+        library.displayBooksInfo(); //we are displaying each book object with it's displayBooks function written within
+        //displayBooksInfo of library.
+    }
+}
+
+
+
+
+
+    /*    for(Books book : books){
            book.displayBooks();
            System.out.println();
         }
@@ -25,9 +59,9 @@ public class Main {
 
         Library libraryWithBook = new Library(books); //we are using books array object in Library as Aggregation
         System.out.println();
-        libraryWithBook.displayBooksInfo();
-    }
+        libraryWithBook.displayBooksInfo();*/
+
 
     // Even if Library class is deleted the Books Class and Objects can still function separately
 
-}
+

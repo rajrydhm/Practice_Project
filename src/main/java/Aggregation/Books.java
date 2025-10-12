@@ -2,16 +2,16 @@ package Aggregation;
 
 public class Books {
     String name;
-    String Pages;
+    int Pages;
     String author;
 
-    public Books(String name, String pages, String author) {
+    public Books(String name, int pages, String author) {
         this.name = name;
         Pages = pages;
         this.author = author;
     }
 
-    void displayBooks() {
+    public void displayBooks() {
         System.out.println("Book name: " + name);
         System.out.println("Pages: " + Pages);
         System.out.println("Author: " + author);
