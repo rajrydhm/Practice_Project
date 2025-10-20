@@ -14,20 +14,21 @@ public class Drinks extends PizzaStore {
     }
 
     @Override
-    public void select(int choice){
+    public String select(int choice){
         switch(choice){
             case 1:
                 System.out.println("You have selected " + d1 + "\n" + "Going back to main menu...");
-                break;
+                return d1;
             case 2:
                 System.out.println("You have selected " + d2 + "\n" + "Going back to main menu...");
-                break;
+                return d2;
             case 3:
                 System.out.println("You have selected " + d3 + "\n" + "Going back to main menu...");
-                break;
+                return d3;
             default:
                 System.out.println("Invalid choice");
         }
+        return null;
 
     }
 

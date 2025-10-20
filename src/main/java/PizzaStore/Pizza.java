@@ -7,6 +7,7 @@ public class Pizza extends PizzaStore {
     String p4 = "Veggie";
     String p5 = "Hawaiian";
 
+
     @Override
     public void Menu(){
         System.out.println("1. " + p1);
@@ -18,26 +19,28 @@ public class Pizza extends PizzaStore {
     }
 
     @Override
-    public void select(int choice){
+    public String select(int choice){
         switch(choice){
             case 1:
                 System.out.println("You have selected " + p1 + "\n" + "Going back to main menu...");
-                break;
+                return p1;
             case 2:
                 System.out.println("You have selected " + p2 + "\n" + "Going back to main menu...");
-                break;
+                return p2;
             case 3:
                 System.out.println("You have selected " + p3 + "\n" + "Going back to main menu...");
-                break;
+                return p3;
             case 4:
                 System.out.println("You have selected " + p4 + "\n" + "Going back to main menu..." ) ;
-                break;
+                return p4;
             case 5:
                 System.out.println("You have selected " + p5 + "\n" + "Going back to main menu...");
-                break;
+                return p5;
             default:
                 System.out.println("Invalid choice" + "\n" + "Going back to main menu...");
         }
+
+        return null;
 
     }
 
